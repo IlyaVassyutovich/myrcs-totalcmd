@@ -1,0 +1,1 @@
+# TotalCommander (R) Configuration files
