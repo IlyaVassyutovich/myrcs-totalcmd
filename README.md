@@ -1,8 +1,8 @@
 # TotalCommander (R) Configuration files
 
 ```powershell
-$TCAppDataPath = "c:\Users\ilya.vassyutovich\AppData\Roaming\GHISLER\"
-$TCConfigPath = "M:\ilya.vassyutovich\documents\myrcs-totalcmd\inis"
+$TCAppDataPath = Join-Path ([Environment]::GetFolderPath('ApplicationData')) "GHISLER"
+$TCConfigPath = Join-Path (Get-Location) "inis"
 New-SymbolicLink `
     -LinkValue (Join-Path $TCAppDataPath "wincmd.ini") `
     -TargetPath (Join-Path $TCConfigPath "root.ini")
